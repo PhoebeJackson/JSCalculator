@@ -8,14 +8,19 @@ const number1 = +readline.prompt();
 console.log('Please enter another number:');
 const number2 = +readline.prompt();
 
-if (operator == "+"){
-    console.log(number1 + " " + operator + " " + number2 + " is " + ( number1 + number2 ) )
-} else if (operator == "*"){
-    console.log(number1 + " " + operator + " " + number2 + " is " + ( number1 * number2 ) )
-} else if (operator == "-"){
-    console.log(number1 + " " + operator + " " + number2 + " is " + ( number1 - number2 ) )
-} else if (operator == "/"){
-    console.log(number1 + " " + operator + " " + number2 + " is " + ( number1 / number2 ) )
-} else {
-    console.log("Invalid operator")
+switch (operator){
+    case "+":
+        console.log(number1 + " " + operator + " " + number2 + " is " + ( number1 + number2 ) );
+        break;
+    case "*":
+        console.log(number1 + " " + operator + " " + number2 + " is " + ( number1 * number2 ) );
+        break;
+    case "-":
+        console.log(number1 + " " + operator + " " + number2 + " is " + ( number1 - number2 ) );
+        break;
+    case "/":
+        console.log(number1 + " " + operator + " " + number2 + " is " + ( number1 / number2 ) );
+        break;
+    default:
+        console.log("Invalid operator");
 }
